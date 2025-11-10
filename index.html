@@ -14,6 +14,24 @@
     gtag('config', 'AW-17711293810');
   </script>
 
+  <!-- 🔥 Click-to-Call Conversion Event Snippet -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17711293810/jloWCOrPyb0bEPLKs_1B',
+        'value': 1.0,
+        'currency': 'INR',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
   <meta name="description" content="Fridge, Washing Machine & RO service in Thanjavur — fast, affordable, genuine parts." />
   <style>
     :root{
@@ -69,11 +87,10 @@
       <h1>FAST & RELIABLE Home Appliance Repair</h1>
       <p style="color:var(--muted)">Fridge cooling issues, washing machine not spinning, RO water purifier servicing — we fix it all with genuine parts.</p>
 
-      <!-- 🔥 Call button with conversion tracking -->
-      <a class="cta" href="tel:+919361731890" onclick="gtag('event', 'conversion', {'send_to': 'AW-17711293810/xxxxxxxxxxx'});">
+      <!-- 📞 Call button with conversion -->
+      <a class="cta" href="tel:+919361731890" onclick="return gtag_report_conversion('tel:+919361731890');">
         📞 Call / WhatsApp: +91 93617 31890
       </a>
-      <!-- replace xxxxxxxxxxx with your conversion ID (from Google Ads “See event snippet”) -->
     </section>
 
     <section id="services">
@@ -100,7 +117,9 @@
     <section id="contact" style="margin-top:30px">
       <h2 style="text-align:center">Contact Us</h2>
       <div style="text-align:center;margin-top:10px">
-        <p><strong>Phone / WhatsApp:</strong> <a href="tel:+919361731890" onclick="gtag('event', 'conversion', {'send_to': 'AW-17711293810/xxxxxxxxxxx'});">+91 93617 31890</a></p>
+        <p><strong>Phone / WhatsApp:</strong> 
+          <a href="tel:+919361731890" onclick="return gtag_report_conversion('tel:+919361731890');">+91 93617 31890</a>
+        </p>
         <p><strong>Location:</strong> Thanjavur, Tamil Nadu</p>
       </div>
     </section>
@@ -111,7 +130,7 @@
   </footer>
 
   <div class="fab-wrap">
-    <a class="fab call" href="tel:+919361731890" onclick="gtag('event', 'conversion', {'send_to': 'AW-17711293810/xxxxxxxxxxx'});">📞</a>
+    <a class="fab call" href="tel:+919361731890" onclick="return gtag_report_conversion('tel:+919361731890');">📞</a>
     <a class="fab wa" href="https://wa.me/919361731890?text=Hello%20Vimal%20Tech%20Service%20Center" target="_blank">💬</a>
   </div>
 </body>
